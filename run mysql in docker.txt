@@ -1,0 +1,5 @@
+docker run --name mysql -p3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7.22
+docker exec -it 0aaac9f9f71f bash
+
+in docker container
+update user set authentication_string=password('root') where user='123456';
